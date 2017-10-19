@@ -1,0 +1,36 @@
+{
+  "name": "crudybeer",
+  "version": "1.0.0",
+  "description": "A beer review app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CollCrom/CRUDyBeer.git"
+  },
+  "keywords": [
+    "beer",
+    "review"
+  ],
+  "author": "@collcrom & @J2b2590",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CollCrom/CRUDyBeer/issues"
+  },
+  "homepage": "https://github.com/CollCrom/CRUDyBeer#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.12.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2"
+  }
+}
