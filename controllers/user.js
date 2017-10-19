@@ -10,14 +10,14 @@ router.get('/', (req, res)=>{
 
 router.route('/register')
 	.get((req,res)=>{
-		res.render('users/register', {loginMessage: ''});
+		res.render('user/register', {loginMessage: ''});
 	})
 	.post((req, res)=>{
 		User.findOne({username: req.body.username}, (err, user)=>{
 			if(err)
 				res.send(err)
 			if(user !== null)
-				res.render('users/register', {message: 'error creating user'})
+				res.render('user/register', {loginMessage: 'error creating user'})
 			else{
 				User.create(req.body, (err, user)=>{
 					if(err)
@@ -29,6 +29,16 @@ router.route('/register')
 			}
 		})
 	})
+
+router.post('/login', (req, res)=>{
+	User.findOne({username: req.body.username}, (err, user)=>{
+		if(err)
+			res.send('error');
+		req.session.logged = true;
+		req.session.username = user.username;
+		res.redirect('/');
+	})
+})
 
 router.post('/logout', (req, res)=>{
 	req.session.destroy()

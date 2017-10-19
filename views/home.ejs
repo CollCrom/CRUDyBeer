@@ -5,5 +5,20 @@
 </head>
 <body>
 	<h1>This is the home view</h1>
+	<% if(!logged){%>
+		<button>
+			<a href="/user/register">Create New Account</a>
+		</button>
+		<form action='/user/login' method='POST'>
+			Username: <input type="text" name="username">
+			Password: <input type="password" name="password">
+			<button>Login</button>
+		</form>
+	<%}%>
+	<% if(logged){%>
+		<form action='/user/logout' method='POST'>
+			<input type="submit" value="Logout">
+		</form>
+	<%}%>
 </body>
 </html>
