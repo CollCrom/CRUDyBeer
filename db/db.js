@@ -8,7 +8,7 @@ mongoose.connect(connectionString);
 mongoose.connection.on('connected', ()=>{
 
 	console.log('mongoose connection to ' + connectionString)
-
+})
 
 mongoose.connection.on('ERROR', ()=>{
 
