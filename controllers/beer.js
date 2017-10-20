@@ -15,7 +15,12 @@ router.get('/', (req, res)=>{
 
 router.route('/new')
 	.get((req, res)=>{
-		res.render('beer/new', {errorMessage: ''})
+		if(!req.session.logged){
+			res.render('home', {loginMessage: 'You must be logged in to review me', logged: req.session.logged})
+		}
+		else{
+			res.render('beer/new', {errorMessage: ''})
+		}
 	})
 
 	.post((req, res)=>{
@@ -25,14 +30,9 @@ router.route('/new')
 				break;
 			}
 		}
-		if(!req.session.logged){
-			res.render('home', {loginMessage: 'You must be logged in to review me', logged: req.session.logged})
-		}
-		else{
-			Beer.create(req.body, (err, beer)=>{
-				res.redirect('/user')
-			})
-		}
+		Beer.create(req.body, (err, beer)=>{
+			res.redirect('/user')
+		})
 	})
 
 router.route('/:id')
