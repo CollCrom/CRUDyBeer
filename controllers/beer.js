@@ -38,6 +38,8 @@ router.route('/new')
 					res.redirect('/user')	
 				})
 			})
+		})
+	})
 
 router.route('/:id')
 	.get((req, res)=>{
