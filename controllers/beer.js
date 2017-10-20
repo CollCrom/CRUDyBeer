@@ -41,13 +41,18 @@ router.route('/new')
 		})
 	})
 
+router.route('/edit')
+	.get((req, res)=>{
+		res.send('edit page')
+	})
+
 router.route('/:id')
 	.get((req, res)=>{
 		Beer.findById(req.params.id, (err, beer)=>{
 			if(err){
 				res.send('im an error getting the ID')
 			}else{
-				res.render('beer/show', {beer: beer, username: req.session.username})
+				res.render('beer/show', {beer: beer, username: req.session.username, logged: req.session.logged})
 			}
 		})
 	})

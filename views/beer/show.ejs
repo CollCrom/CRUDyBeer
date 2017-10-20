@@ -4,21 +4,19 @@
 	<title></title>
 </head>
 <body>
-
-	<%=username%>
 	<% include ../partials/nav%>
-		
-
-
-
-		<section>
-			<h1><%= beer.name%></h1>
-			Type: <%= beer.type%><br>
-			ABV: <%= beer.abv%><br>
-			Brewery: <%= beer.brewery%><br>
-			Rating: <%= beer.rating%><br>
-			Review: <%= beer.review%><br>
-		</section>
-
+	<%=username%>
+	<section>
+		<h1><%= beer.name%></h1>
+		Type: <%= beer.type%><br>
+		ABV: <%= beer.abv%><br>
+		Brewery: <%= beer.brewery%><br>
+		Rating: <%= beer.rating%><br>
+		Review: <%= beer.review%><br>
+	</section>
+	<% if(logged){%>
+		<a href="/beer/edit">Edit this beer</a><br>
+		<a href="#">Delete this beer</a><br>
+	<%}%>
 </body>
 </html>
