@@ -4,10 +4,10 @@ const User = require('../models/user');
 const Beer = require('../models/beer');
 const bcrypt = require('bcrypt');
 
-//DOES NOT WORK ASK JIM TOMORROW FOR HELP
 router.route('/')
 	.get((req, res)=>{
 		User.findOne({username: req.session.username}, (err, user)=>{
+			console.log(user.beer)
 			if(err)
 				res.send(err)
 			if(!user)
@@ -70,7 +70,7 @@ router.route('/:id')
 			if(err)
 				res.send(err)
 			else
-				res.render('user/profile', {user: user, logged: req.session.logged})
+				res.render('user/profile', {user: user, userBeers: user.beer, logged: req.session.logged})
 		})
 	})
 
