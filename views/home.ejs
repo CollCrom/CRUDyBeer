@@ -6,19 +6,7 @@
 <body>
 	<header>
 		<h1>Welcome to CRUDy Beer Reviews!</h1>
-		<nav>
-			<ul>
-				<li>
-					<a href="/">Home</a>
-				</li>
-				<li>
-					<a href="/beer">Reviews</a>
-				</li>
-				<li>
-					<a href="/user">Profile</a>
-				</li>
-			</ul>
-		</nav>
+		<% include partials/nav %>
 	</header>
 	<% if(!logged){%>
 		<h3>Login</h3>
