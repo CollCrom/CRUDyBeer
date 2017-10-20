@@ -15,7 +15,7 @@
 		Review: <%= beer.review%><br>
 	</section>
 	<% if(logged){%>
-		<a href="/beer/edit">Edit this beer</a><br>
+		<a href="/beer/edit/<%=beer._id%>">Edit this beer</a><br>
 		<a href="#">Delete this beer</a><br>
 	<%}%>
 </body>

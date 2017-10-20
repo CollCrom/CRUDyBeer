@@ -41,9 +41,11 @@ router.route('/new')
 		})
 	})
 
-router.route('/edit')
+router.route('/edit/:id')
 	.get((req, res)=>{
-		res.send('edit page')
+		Beer.findById(req.params.id, (err, beer)=>{
+			res.render('beer/edit', {beer: beer})
+		})
 	})
 
 router.route('/:id')
