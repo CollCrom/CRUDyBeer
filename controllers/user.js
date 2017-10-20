@@ -10,7 +10,10 @@ router.route('/')
 		User.findOne({username: req.session.username}, (err, user)=>{
 			if(err)
 				res.send(err)
-			res.render('user/profile', {user: user, logged: req.session.logged})
+			if(!user)
+				res.render('home', {loginMessage: 'You need to be logged in to acces your profile', logged: req.session.lgged})
+			else
+				res.render('user/profile', {user: user, logged: req.session.logged})
 		})
 	})
 
@@ -28,10 +31,12 @@ router.route('/register')
 				User.create(req.body, (err, user)=>{
 					if(err)
 						res.send(err)
-					req.session.logged = true;
-					req.session.username = user.username;
-					req.session.id = user._id;
-					res.render('user/profile', {user: user, logged: req.session.logged});
+					else{
+						req.session.logged = true;
+						req.session.username = user.username;
+						req.session.id = user._id;
+						res.render('user/profile', {user: user, logged: req.session.logged});
+					}
 				})
 			}
 		})
@@ -42,7 +47,7 @@ router.route('/login')
 		User.findOne({username: req.body.username}, (err, user)=>{
 			if(err)
 				res.send(err);
-			if(user === null)
+			if(!user)
 				res.render('home', {loginMessage: `Can't log in`, logged: req.session.logged})
 			else {
 				req.session.logged = true;
@@ -64,7 +69,8 @@ router.route('/:id')
 		User.findById(req.params.id, (err, user)=>{
 			if(err)
 				res.send(err)
-			res.render('user/profile', {user: user, logged: req.session.logged})
+			else
+				res.render('user/profile', {user: user, logged: req.session.logged})
 		})
 	})
 

@@ -6,16 +6,7 @@
 <body>
 	<header>
 		<h1>Create Account</h1>
-		<nav>
-			<ul>
-				<li>
-					<a href="/">Home</a>
-				</li>
-				<li>
-					<a href="/beer">Reviews</a>
-				</li>
-			</ul>
-		</nav>
+		<% include ../partials/nav %>
 	</header>
 	<form action='/user/register' method='POST'>
 		Username: <input type="text" name="username">

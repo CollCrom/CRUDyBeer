@@ -6,19 +6,7 @@
 <body>
 	<header>
 		<h1>Welcome <%=user.username%></h1>
-		<nav>
-			<ul>
-				<li>
-					<a href="/">Home</a>
-				</li>
-				<li>
-					<a href="/beer">Reviews</a>
-				</li>
-				<li>
-					<a href="/user/<%=user._id%>">Profile</a>
-				</li>
-			</ul>
-		</nav>
+		<% include ../partials/nav %>
 	</header>
 	<% if(logged){%>
 		<form action='/user/logout' method='POST'>
