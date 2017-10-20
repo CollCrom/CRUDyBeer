@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
 const beerSchema = new mongoose.Schema({
-	
+
+	name:    String,
 	type:    String,
-	abv:     Number,
+	abv:     String,
 	brewery: String,
 	rating:  Number,
 	review:  String

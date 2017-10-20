@@ -19,7 +19,25 @@
 	</header>
 	<main>
 		<form action="/beer" method="POST">
-			<input type="submit" name="Beer Name"><br>
+			<h4>The Name Of Your New Beer</h4>
+			<input type="text" name="name"><br>
+			<h4>What Kind Of Beer...e.g 'Lager'</h4>
+			<input type="text" name="name"><br>
+			
+			
+			<h4>ABV</h4>
+			<input type="text" name="name">%
+			<h4>Where Was This Beer Brewed</h4>
+			<input type="text" name="name"><br>
+			<h4>Rate This Beer!</h4>
+			<select name="rating">
+			<% for(i = 0; i < 5.5; i+= .5){ %>
+
+				<option><%= i%></option>
+
+			<%}%>
+			</select>
+			<h4>"Comments About This Beer"</h4>
 			<textarea name="body"></textarea><br>
 			<input type="submit" name="Submit New Beer">			
 		</form>
