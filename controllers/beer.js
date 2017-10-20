@@ -4,16 +4,32 @@ const Beer    = require('../models/beer')
 const User    = require('../models/user')
 
 router.get('/', (req, res)=>{
-	res.render('beer', {})
+	Beer.find((err, beers)=>{
+		res.render('beer/index', {
+
+							beers: beers
+		})
+	})
 })
 
 
 router.route('/new')
 	.get((req, res)=>{
-		res.render('beer/new', {})
+		if(!req.session.logged){
+			res.render('home', {loginMessage: 'You must be logged in to review me', logged: req.session.logged})
+		}
+		else{
+			res.render('beer/new', {errorMessage: ''})
+		}
 	})
 	.post((req, res)=>{
 		User.findOne(req.session.username,(err, user)=>{
+			for(el in req.body){
+				if(!req.body[el]){
+					res.render('beer/new', {errorMessage: 'Field cannot be empty'})
+					break;
+				}
+			}
 			Beer.create(req.body, (err, beer)=>{
 				if(err)
 					res.send(err);
@@ -22,6 +38,15 @@ router.route('/new')
 					res.redirect('/user')	
 				})
 			})
+
+router.route('/:id')
+	.get((req, res)=>{
+		Beer.findById(req.params.id, (err, beers)=>{
+			if(err){
+				res.send('im an error getting the ID')
+			}else{
+				res.render('beer/show', {beer: beer})
+			}
 		})
 	})
 
