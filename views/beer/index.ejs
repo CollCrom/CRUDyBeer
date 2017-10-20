@@ -14,8 +14,8 @@
 	<%beers.forEach((beer)=>{%>
 		<a href="/beer/<%=beer._id%>">
 			Name: <%= beer.name%><br>
-			<%= beer.type%>
-			<%= beer.rating%>
+			Type: <%= beer.type%>
+			Rating: <%= beer.rating%>/5
 		</a>
 		<br><br>
 	<%})%>

@@ -35,15 +35,15 @@ router.route('/new')
 					res.send(err);
 				user.beer.push(beer);
 				user.save((err, data)=>{
-					res.redirect('/user')	
+					res.render('user/profile', {user: user, userBeer: user.beer, logged: req.session.logged})	
 				})
 			})
 		})
 	})
-	
+
 router.route('/:id')
 	.get((req, res)=>{
-		Beer.findById(req.params.id, (err, beers)=>{
+		Beer.findById(req.params.id, (err, beer)=>{
 			if(err){
 				res.send('im an error getting the ID')
 			}else{

@@ -12,7 +12,7 @@ router.route('/')
 			if(!user)
 				res.render('home', {loginMessage: 'You need to be logged in to acces your profile', logged: req.session.lgged})
 			else
-				res.render('user/profile', {user: user, logged: req.session.logged})
+				res.render('user/profile', {user: user, userBeer: user.beer, logged: req.session.logged})
 		})
 	})
 
@@ -34,7 +34,7 @@ router.route('/register')
 						req.session.logged = true;
 						req.session.username = user.username;
 						req.session.id = user._id;
-						res.render('user/profile', {user: user, logged: req.session.logged});
+						res.render('user/profile', {user: user, userBeer: user.beer, logged: req.session.logged});
 					}
 				})
 			}
@@ -52,7 +52,7 @@ router.route('/login')
 				req.session.logged = true;
 				req.session.username = user.username;
 				req.session.id = user._id;
-				res.render('user/profile', {user: user, logged: req.session.logged})
+				res.render('user/profile', {user: user, userBeer: user.beer, logged: req.session.logged})
 			}
 		})
 	})

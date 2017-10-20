@@ -8,6 +8,15 @@
 		<h1>Welcome <%=user.username%></h1>
 		<% include ../partials/nav %>
 	</header>
+	<main>
+		<%userBeer.forEach((beer) =>{%>
+			<a href="/beer/<%=beer._id%>">
+				Name: <%= beer.name%><br>
+				Type: <%= beer.type%>
+				Rating: <%= beer.rating%>/5
+			</a>
+		<%})%>
+	</main>
 	<% if(logged){%>
 		<form action='/user/logout' method='POST'>
 			<input type="submit" value="Logout">
