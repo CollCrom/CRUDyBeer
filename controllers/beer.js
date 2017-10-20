@@ -7,9 +7,18 @@ router.get('/', (req, res)=>{
 	res.render('beer', {})
 })
 
-router.get('/new', (req, res)=>{
-	res.render('beer/new', {})
-})
+
+router.route('/new')
+	.get((req, res)=>{
+		res.render('beer/new', {})
+	})
+
+	.post((req, res)=>{
+
+	Beer.create(req.body, (err, beer)=>{
+		res.redirect('/user')
+		})
+	})
 
 
 
