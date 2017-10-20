@@ -4,16 +4,33 @@
 	<title></title>
 </head>
 <body>
-	<h1>This is the home view</h1>
+	<header>
+		<h1>Welcome to CRUDy Beer Reviews!</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/beer">Reviews</a>
+				</li>
+				<li>
+					<a href="/user">Profile</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
 	<% if(!logged){%>
-		<button>
-			<a href="/user/register">Create New Account</a>
-		</button>
+		<h3>Login</h3>
 		<form action='/user/login' method='POST'>
 			Username: <input type="text" name="username">
 			Password: <input type="password" name="password">
 			<button>Login</button>
+			<%=loginMessage%>
 		</form>
+		<button>
+			<a href="/user/register">Create New Account</a>
+		</button>
 	<%}%>
 	<% if(logged){%>
 		<form action='/user/logout' method='POST'>
