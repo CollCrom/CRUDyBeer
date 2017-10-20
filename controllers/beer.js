@@ -47,7 +47,7 @@ router.route('/:id')
 			if(err){
 				res.send('im an error getting the ID')
 			}else{
-				res.render('beer/show', {beer: beer})
+				res.render('beer/show', {beer: beer, username: req.session.username})
 			}
 		})
 	})
