@@ -23,7 +23,7 @@ router.route('/new')
 		}
 	})
 	.post((req, res)=>{
-		User.findOne(req.session.username,(err, user)=>{
+		User.findOne({username: req.session.username},(err, user)=>{
 			for(el in req.body){
 				if(!req.body[el]){
 					res.render('beer/new', {errorMessage: 'Field cannot be empty'})
@@ -34,13 +34,13 @@ router.route('/new')
 				if(err)
 					res.send(err);
 				user.beer.push(beer);
-				user.beer.save((err, data)=>{
+				user.save((err, data)=>{
 					res.redirect('/user')	
 				})
 			})
 		})
 	})
-
+	
 router.route('/:id')
 	.get((req, res)=>{
 		Beer.findById(req.params.id, (err, beers)=>{

@@ -7,7 +7,6 @@ const bcrypt = require('bcrypt');
 router.route('/')
 	.get((req, res)=>{
 		User.findOne({username: req.session.username}, (err, user)=>{
-			console.log(user.beer)
 			if(err)
 				res.send(err)
 			if(!user)
