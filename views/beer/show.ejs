@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<% include ..partials/head %>
 </head>
 <body>
 	<% include ../partials/nav%>
@@ -14,7 +14,7 @@
 		Rating: <%= beer.rating%><br>
 		Review: <%= beer.review%><br>
 	</section>
-	<% if(logged){%>
+	<% if(logged && beer.reviewedBy === username){%>
 		<a href="/beer/edit/<%=beer._id%>">Edit this beer</a><br>
 		<a href="#">Delete this beer</a><br>
 	<%}%>

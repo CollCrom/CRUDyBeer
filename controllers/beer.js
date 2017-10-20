@@ -19,14 +19,14 @@ router.route('/new')
 			res.render('home', {loginMessage: 'You must be logged in to review me', logged: req.session.logged})
 		}
 		else{
-			res.render('beer/new', {errorMessage: ''})
+			res.render('beer/new', {errorMessage: '', username: req.session.username})
 		}
 	})
 	.post((req, res)=>{
 		User.findOne({username: req.session.username},(err, user)=>{
 			for(el in req.body){
 				if(!req.body[el]){
-					res.render('beer/new', {errorMessage: 'Field cannot be empty'})
+					res.render('beer/new', {errorMessage: 'Field cannot be empty', username: req.session.username})
 					break;
 				}
 			}
@@ -44,6 +44,7 @@ router.route('/new')
 router.route('/edit/:id')
 	.get((req, res)=>{
 		Beer.findById(req.params.id, (err, beer)=>{
+			console.log(beer);
 			res.render('beer/edit', {beer: beer})
 		})
 	})

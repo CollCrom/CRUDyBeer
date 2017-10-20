@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<% include ..partials/head %>
 </head>
 <body>
-
+	<% include ../partials/nav %>
 				<h1>Make an Edit Of Your Beer</h1>
 	<main>
-		<form action="/beer/edit?_method=PUT" method="POST">
+		<form action="/beer/edit/<%=beer._id%>?_method=PUT" method="POST">
 				<h4>The Name Of Your New Beer</h4>
 				<input type="text" name="name" value="<%=beer.name%>"><br>
 				<h4>What Kind Of Beer...e.g 'Lager'</h4>
 				<input type="text" name="type" value=<%=beer.type%>><br>
-				
-				
 				<h4>ABV</h4>
 				<input type="text" name="abv" value="<%=beer.abv%>">%
-				<h4>Where Was This Beer Brewed</h4>
-				<input type="text" name="brewery" vaule="<%=beer.brewery%>"><br>
+				<h4>Brewery</h4>
+				<input type="text" name="brewery" value="<%=beer.brewery%>"><br>
 				<h4>Rate This Beer!</h4>
 				<select name="rating" value="<%=beer.rating%>">
 				<% for(i = 0; i < 5.5; i+= .5){ %>
-
 					<option><%= i%></option>
-
 				<%}%>
 				</select>
 				<h4>"Comments About This Beer"</h4>
 				<textarea name="review"><%=beer.review%></textarea><br>
 				<input type="submit" name="Edit This Beer">			
 			</form>
-
 	</main>
 </body>
 </html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<% include ..partials/head %>
 </head>
 <body>
+	<% include ../partials/nav %>
 	<header>
 		<h1>Create Account</h1>
-		<% include ../partials/nav %>
 	</header>
 	<form action='/user/register' method='POST'>
 		Username: <input type="text" name="username">
