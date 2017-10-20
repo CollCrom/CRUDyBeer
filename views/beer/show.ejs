@@ -5,14 +5,19 @@
 </head>
 <body>
 
-	<h1><%= beer.name%></h1>
+	<%=username%>
 	<% include ../partials/nav%>
 		
 
 
 
 		<section>
-			<%= %>
+			<h1><%= beer.name%></h1>
+			Type: <%= beer.type%><br>
+			ABV: <%= beer.abv%><br>
+			Brewery: <%= beer.brewery%><br>
+			Rating: <%= beer.rating%><br>
+			Review: <%= beer.review%><br>
 		</section>
 
 </body>

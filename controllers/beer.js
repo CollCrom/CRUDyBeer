@@ -42,11 +42,11 @@ router.route('/new')
 	})
 router.route('/:id')
 	.get((req, res)=>{
-		Beer.findById(req.params.id, (err, beers)=>{
+		Beer.findById(req.params.id, (err, beer)=>{
 			if(err){
 				res.send('im an error getting the ID')
 			}else{
-				res.render('beer/show', {beer: beer})
+				res.render('beer/show', {beer: beer, username: req.session.username})
 			}
 		})
 	})
