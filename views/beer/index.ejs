@@ -10,12 +10,16 @@
 		<% include ../partials/nav %>
 	</header>
 	<h2>List Of Beers</h2>
-	<ul>
-		
-	</ul>
 
-
-
+	<%beers.forEach((beer)=>{%>
+		<a href="/beer/<%=beer._id%>">
+			Name: <%= beer.name%><br>
+			<%= beer.type%>
+			<%= beer.rating%>
+		</a>
+		<br><br>
+	<%})%>
+	
 
 
 
