@@ -47,6 +47,11 @@ router.route('/edit/:id')
 			res.render('beer/edit', {beer: beer})
 		})
 	})
+	.put((req, res)=>{
+		Beer.findByIdAndUpdate(req.params.id, req.body,(err, beer)=>{
+			res.render('beer/show', {beer: beer, username: req.session.username, logged: req.session.logged})
+		})
+	})
 
 router.route('/:id')
 	.get((req, res)=>{
