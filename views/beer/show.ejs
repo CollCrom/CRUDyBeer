@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<% include ..partials/head %>
+	<% include ../partials/head %>
 </head>
 <body>
 	<% include ../partials/nav%>
@@ -9,9 +9,9 @@
 	<section>
 		<h1><%= beer.name%></h1>
 		Type: <%= beer.type%><br>
-		ABV: <%= beer.abv%><br>
+		ABV: <%= beer.abv%>%<br>
 		Brewery: <%= beer.brewery%><br>
-		Rating: <%= beer.rating%><br>
+		Rating: <%= beer.rating%>/5<br>
 		Review: <%= beer.review%><br>
 	</section>
 	<% if(logged && beer.reviewedBy === username){%>

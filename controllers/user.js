@@ -10,7 +10,7 @@ router.route('/')
 			if(err)
 				res.send(err)
 			if(!user)
-				res.render('home', {loginMessage: 'You need to be logged in to acces your profile', logged: req.session.lgged})
+				res.render('home', {loginMessage: 'You need to be logged in to access your profile', logged: req.session.lgged})
 			else
 				res.render('user/profile', {user: user, userBeer: user.beer, logged: req.session.logged})
 		})

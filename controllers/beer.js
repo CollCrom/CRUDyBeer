@@ -16,7 +16,7 @@ router.get('/', (req, res)=>{
 router.route('/new')
 	.get((req, res)=>{
 		if(!req.session.logged){
-			res.render('home', {loginMessage: 'You must be logged in to review me', logged: req.session.logged})
+			res.render('home', {loginMessage: 'You must be logged in to make reviews', logged: req.session.logged})
 		}
 		else{
 			res.render('beer/new', {errorMessage: '', username: req.session.username})

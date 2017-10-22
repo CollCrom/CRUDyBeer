@@ -27,7 +27,8 @@
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "method-override": "^2.3.10",
-    "mongoose": "^4.12.3"
+    "mongoose": "^4.12.3",
+    "request": "^2.83.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
