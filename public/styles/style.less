@@ -1,12 +1,13 @@
 @text-align: center;
 @green: green;
 @red: red;
-
+@transition: 0.3s linear;
 
 
 body {
 	
 	margin: auto 0;
+	text-align: center;
 
 
 }
@@ -17,56 +18,60 @@ body {
 	border-bottom-color: @green;
 	margin-top: 1%;
 	text-align: @text-align;
+
 	
 
 
 	a:link{
 		text-decoration: none;
-		// text-transform: uppercase;
-		color: yellow;
-	}
-
-	a:hover{
 		
-
-
+		
 	}
+
+	a{
+		color: black;
+	}
+
+}
+
+.btn{
+
+  
+ 
+  overflow: hidden;
+  
+  // color: #FFF;
+  font-weight: 700;
+  
+  text-decoration: none;
+  
+  border: 4px solid #FFF;
+  background-color: rgba(203,89,9,.7);
+  background-position: 0 -50%;
+  background-repeat: repeat-x;
+  border-radius: 50px;
+  box-shadow: inset 2px 3px 0px 0px rgba(50, 50, 50, 0.75);
+  transition: background-color 1000ms;
+
+ 
+}
+
+.btn:hover{
 
 	
+	background-color: rgba(255,251,177, .5);
 }
 
-.form-inline{
-
-	button{
-
-		border: 4px solid #FFF;
-  		background-color: rgba(0,0,0,.34);
-  // 		background-position: 0 -50%;
-  // 		background-repeat: repeat-x;
-  // 		border-radius: 100px;
-  // 		-webkit-box-shadow: inset 4px 4px 0px 0px rgba(50, 50, 50, 0.75);
-		// -moz-box-shadow:    inset 4px 4px 0px 0px rgba(50, 50, 50, 0.75);
-		// box-shadow:         inset 4px 4px 0px 0px rgba(50, 50, 50, 0.75);
-		// transition: background-position .75s ease;
-}
-	}
-
-.new{
 
 
-	text-align: @text-align;
 
-}
 
-.newHeader{
 
-	text-align: @text-align;
 
-}
 
-.newHead{
+	
+	
 
-	// background-color: @red;
-	background-color: ;
-}
+
+
 
