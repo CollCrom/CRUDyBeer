@@ -10,7 +10,7 @@ gulp.task('less-css', ()=>{
 })
 
 gulp.task('watch', () =>{
-	livereload.listen();
+	const server = livereload();
 	gulp.watch(['./public/styles/*.less'], ['less-css']);
 })
 

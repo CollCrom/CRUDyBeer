@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const request = require('request');
-const beerArr = require('./utilities/apiCall');
+//const beerArr = require('./utilities/apiCall');
 
 app.use(session({
 	secret:process.env.SESSION_KEY, //jeff and collin
