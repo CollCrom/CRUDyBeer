@@ -6,6 +6,7 @@ const beerSchema = new mongoose.Schema({
 	type:       String,
 	abv:        String,
 	brewery:    String,
+	breweryImg: String,
 	rating:     Number,
 	review:     String,
 	reviewedBy: String
