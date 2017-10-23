@@ -3,12 +3,13 @@
 <head>
 	<% include ../partials/head %>
 </head>
-<body>
+
+<body class='newHead'>
 	<% include ../partials/nav %>
-	<header>
+	<header class='newHeader'>
 		<h1>Add New Beer!</h1>
 	</header>
-	<main>
+	<main class='new'>
 		<form action="/beer/new" method="POST">
 			<h4>The Name Of Your New Beer</h4>
 			<input type="text" name="name"><br>
