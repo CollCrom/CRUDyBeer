@@ -1,4 +1,5 @@
 const request = require('request');
+const Beer    = require('../models/beer')
 
 const options = {
 	url: 'http://api.brewerydb.com/v2/beers?availableId=1&withBreweries=Y&key='+process.env.BEER_API_KEY,
@@ -8,7 +9,6 @@ const options = {
 	}
 };
 const apiCall = () => {
-	const beerArr = [];
 	request(options, (err, res, body)=>{
 		const json = JSON.parse(body);
 		const beers = json.data;
@@ -19,12 +19,16 @@ const apiCall = () => {
 				beerObj.name = beer.name;
 				beerObj.abv = beer.abv;
 				beerObj.type = beer.style.shortName;
-				beerObj.description = beer.description;
+				beerObj.review = beer.description;
 				beerObj.brewery = beer.breweries[0].name;
-				beerArr.push(beerObj);
+				beerObj.rating = Math.floor(Math.random()*10) / 2;
+				Beer.create(beerObj, (err, beer)=>{
+					if(err)
+						res.send(err)
+				})
 			}
 		})
 	})
-	return beerArr;
 }
+
 module.exports = apiCall();
