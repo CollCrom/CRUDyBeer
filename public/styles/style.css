@@ -1,13 +1,12 @@
 body {
   margin: auto 0;
   text-align: center;
-   /* Full height */
+  /* Full height */
   height: 100%;
   background-image: url("../images/cardBackground.jpg");
 }
 .navbar {
   border-style: solid;
-  border-bottom-color: green;
   margin-top: 1%;
   text-align: center;
 }
@@ -21,16 +20,18 @@ body {
   overflow: hidden;
   font-weight: 700;
   text-decoration: none;
-  border: 4px solid #FFF;
-  background-color: rgba(203, 89, 9, 0.7);
+  background-color: rgba(255, 251, 177, 0.7);
   background-position: 0 -50%;
   background-repeat: repeat-x;
   border-radius: 50px;
-  box-shadow: inset 2px 3px 0px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: inset 4px 3px 0px 0px rgba(106, 44, 12, 0.5);
   transition: background-color 1000ms;
 }
 .btn:hover {
-  background-color: rgba(255, 251, 177, 0.5);
+  background-color: rgba(203, 89, 9, 0.7);
+}
+.btn:hover a {
+  color: white;
 }
 .card-deck {
   display: flex;
