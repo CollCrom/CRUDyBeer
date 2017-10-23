@@ -7,32 +7,36 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const request = require('request');
 
-const options = {
-	url: 'http://api.brewerydb.com/v2/beer/random?key=b4499fb9e0c21596e2b33684953ef8ba',
-	method: 'GET',
-	headers: {
-		'Access-Control-Allow-Origin': '*'
-	}
-};
+// const options = {
+// 	url: 'http://api.brewerydb.com/v2/beers?availableId=1&withBreweries=Y&key=b4499fb9e0c21596e2b33684953ef8ba',
+// 	method: 'GET',
+// 	headers: {
+// 		'Access-Control-Allow-Origin': '*'
+// 	}
+// };
 
-const breweryArr = [];
-for(let i = 0; i < 10; i++){
-	request(options, (err, res, body)=>{
-		const json = JSON.parse(body);
-		const beer = json.data;
-		let beerObj = {}
-		if(beer.name && beer.abv && beer.style.name && beer.description){
-			beerObj.name = beer.name;
-			beerObj.abv = beer.abv;
-			beerObj.type = beer.style.name;
-			beerObj.description = beer.description;
-			breweryArr.push(beerObj);
-			console.log(breweryArr.length)
-			console.log(breweryArr);
-		}
-	})
-	console.log(breweryArr.length);
-}
+// //Ask Jim about this
+// const breweryArr = [];
+// request(options, (err, res, body)=>{
+// 	const json = JSON.parse(body);
+// 	const beers = json.data;
+// 	beers.forEach((beer)=>{
+// 		let beerObj = {}
+// 		// name         abv         type                    review              brewery
+// 		if(beer.name && beer.abv && beer.style.shortName && beer.description && beer.breweries[0].name){
+// 			beerObj.name = beer.name;
+// 			beerObj.abv = beer.abv;
+// 			beerObj.type = beer.style.shortName;
+// 			beerObj.description = beer.description;
+// 			beerObj.breweries[0].name
+// 			breweryArr.push(beerObj);
+// 		}
+// 	})
+// })
+
+// breweryArr.forEach((beer)=>{
+// 	console.log(beer);
+// })
 
 app.use(session({
 	secret: 'b011ba61da4794b1371d6b63e4e5f5de', //jeff and collin
