@@ -23,6 +23,7 @@
   "dependencies": {
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-less": "^3.3.2"
+    "gulp-less": "^3.3.2",
+    "gulp-livereload": "^3.8.1"
   }
 }
