@@ -1,13 +1,23 @@
+
 @text-align: center;
 @green: green;
 @red: red;
 @transition: 0.3s linear;
 
+@borderRadius: 6%;
+@kulerLightBrown: rgba(106, 44, 12, 0.5);
+@kulerDarkBrown: rgba(27, 16, 13, 0.7);
+@kulerDarkOrange: rgba(203, 89, 9, 0.7);
+@kulerLightOrange: rgba(241, 142, 28, 0.7);
+@kulerCream: rgba(255, 251, 177, 0.7);
 
 body {
 	
 	margin: auto 0;
 	text-align: center;
+      /* Full height */
+    height: 100%; 
+    background-image: url("../images/cardBackground.jpg");
 
 
 }
@@ -62,16 +72,28 @@ body {
 	background-color: rgba(255,251,177, .5);
 }
 
+.card-deck {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
-
-
-
-
-
-
-	
-	
-
-
-
-
+.card {
+	background: @kulerLightBrown;
+	flex-basis: 20%;
+	color: white;
+	text-align: center;
+	border-style: outset;
+	border-radius: @borderRadius;
+	margin: .5%;
+	font-size: 100%;
+	.card-text {
+		font-size: 200%;
+	}
+	.card-title {
+		font-size: 300%;
+	}
+	.card-img-top {
+		border-radius: @borderRadius @borderRadius 0% 0%;
+	}
+}

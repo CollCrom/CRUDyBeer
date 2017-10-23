@@ -14,13 +14,14 @@ const apiCall = () => {
 		const beers = json.data;
 		beers.forEach((beer, i)=>{
 			const beerObj = {}
-			// name         abv         type                    review              brewery
-			if(beer.name && beer.abv && beer.style.shortName && beer.description && beer.breweries[0].name){
+			// name         abv         type                    review              brewery                   brewery image
+			if(beer.name && beer.abv && beer.style.shortName && beer.description && beer.breweries[0].name && beer.breweries[0].images){
 				beerObj.name = beer.name;
 				beerObj.abv = beer.abv;
 				beerObj.type = beer.style.shortName;
 				beerObj.review = beer.description;
 				beerObj.brewery = beer.breweries[0].name;
+				beerObj.breweryImg = beer.breweries[0].images.medium;
 				beerObj.rating = Math.floor(Math.random()*10) / 2;
 				Beer.create(beerObj, (err, beer)=>{
 					if(err)
