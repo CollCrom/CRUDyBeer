@@ -36,6 +36,9 @@ router.route('/new')
 					break;
 				}
 			}
+			if(req.body.abv.slice(-1) !== '%'){
+				req.body.abv += '%';
+			}
 			Beer.create(req.body, (err, beer)=>{
 				if(err)
 					res.send(err);

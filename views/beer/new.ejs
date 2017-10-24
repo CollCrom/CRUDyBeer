@@ -10,8 +10,6 @@
 		<h1 class='top-page-text'>Add New Beer!</h1>
 	</header>
 	<main class='new'>
-
-	
 		<form action="/beer/new" method="POST">
 			<div class="container"'>
 				<div class='row'>
@@ -41,12 +39,14 @@
 					</div>
 					<div class='col-sm-6'>
 						<h4>Rate This Beer!</h4>
-						<select name="rating">
-							<option>Rating</option>
-						<% for(i = 0; i < 6; i++){ %>
-							<option><%= i%></option>
-						<%}%>
-						</select>
+						<div class="mainselection">
+							<select name="rating">
+								<option>Rating</option>
+							<% for(i = 0; i < 6; i++){ %>
+								<option><%= i%></option>
+							<%}%>
+							</select>
+						</div>
 					</div>
 				</div>		
 				<div>
@@ -57,9 +57,7 @@
 			</div>
 			<input class="btn btn-outline-success" type="submit" value='Submit'>	
 		</form>
-		
-		<%=errorMessage%>
-		
+		<p><%=errorMessage%></p>
 	</main>
 
 </body>
