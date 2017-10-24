@@ -14,13 +14,36 @@ h5,
 h6 {
   color: white;
 }
+<<<<<<< HEAD
 h3 {
   font-size: 300%;
 }
+=======
+>>>>>>> a2b92e65781b1d2c93921d7479e789813e93ec34
 p {
   color: white;
   font-size: 155%;
 }
+<<<<<<< HEAD
+=======
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.row1,
+.row2,
+.row3 {
+  display: flex;
+  flex-direction: row;
+}
+.col1,
+.col2 .col3 {
+  display: flex;
+  flex-direction: column;
+}
+>>>>>>> a2b92e65781b1d2c93921d7479e789813e93ec34
 .top-page-text {
   font-family: 'Lobster', cursive;
   font-size: 600%;
@@ -66,6 +89,7 @@ a:link {
   flex-wrap: wrap;
   justify-content: center;
 }
+<<<<<<< HEAD
 .show-card {
   justify-content: center;
   background: rgba(106, 44, 12, 0.7);
@@ -79,6 +103,8 @@ a:link {
   max-width: 800px;
   margin: auto;
 }
+=======
+>>>>>>> a2b92e65781b1d2c93921d7479e789813e93ec34
 .card {
   justify-content: center;
   height: 375px;
@@ -87,7 +113,11 @@ a:link {
   color: white;
   text-align: center;
   border-style: outset;
+<<<<<<< HEAD
   border-radius: 25px;
+=======
+  border-radius: 6%;
+>>>>>>> a2b92e65781b1d2c93921d7479e789813e93ec34
   margin: .5%;
   font-size: 100%;
 }
@@ -107,6 +137,7 @@ a:link {
   height: 170px;
   align-self: center;
 }
+<<<<<<< HEAD
 .card a {
   text-decoration: none;
 }
@@ -114,6 +145,15 @@ a:link {
   width: 200px;
   height: auto;
 }
+=======
+.card .card-rating {
+  width: 200px;
+  height: auto;
+}
+.card a {
+  text-decoration: none;
+}
+>>>>>>> a2b92e65781b1d2c93921d7479e789813e93ec34
 .new {
   margin-top: 10%;
   color: rgba(27, 16, 13, 0.7);
