@@ -36,6 +36,9 @@ input, textarea{
 	color: black;
 	background-color: @kulerLightOrange;
 }
+select:focus, textarea:focus, input:focus {
+	outline: none;
+}
 input {
 	width: 300px;
 	height: 40px;
@@ -66,17 +69,14 @@ input:-webkit-autofill {
 a {
 	color: black;
 }
-a:link{
-	text-decoration: none;		
+a, a:link, a.visited, a:focus{
+	text-decoration: none;
+	color: black;	
 }
 .navbar{
 	border-style: solid; 
 	margin-top: 1%;
 	text-align: @text-align;
-
-	a:link{
-		text-decoration: none;		
-	}
 }
 
 .btn{
@@ -107,6 +107,12 @@ a:link{
 }
 
 .btn:focus{
+	outline: 0;
+}
+.btn:active{
+	outline: 0;
+}
+.btn:focus:active{
 	outline: 0;
 }
 
