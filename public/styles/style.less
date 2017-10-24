@@ -5,21 +5,21 @@
 @transition: 0.3s linear;
 
 @borderRadius: 6%;
-@kulerLightBrown: rgba(106, 44, 12, 0.5);
+@kulerLightBrown: rgba(106, 44, 12, 0.7);
 @kulerDarkBrown: rgba(27, 16, 13, 0.7);
 @kulerDarkOrange: rgba(203, 89, 9, 0.7);
 @kulerLightOrange: rgba(241, 142, 28, 0.7);
 @kulerCream: rgba(255, 251, 177, 0.7);
 
 body {
-	
 	margin: auto 0;
 	text-align: center;
       /* Full height */
     height: 100%; 
     background-image: url("../images/cardBackground.jpg");
-
-
+    h1, h2, h3, h4, h5, h6, p, a {
+    	color : white;
+    }
 }
 
 .navbar{
@@ -45,12 +45,10 @@ body {
 
 .btn{
   overflow: hidden;
-  
-  // color: #FFF;
   font-weight: 700;
   
   text-decoration: none;
-  
+  font-size: 2em;
   background-color: @kulerCream;
   background-position: 0 -50%;
   background-repeat: repeat-x;
@@ -75,8 +73,10 @@ body {
 }
 
 .card {
+	justify-content: center;
+	height: 375px;
 	background: @kulerLightBrown;
-	flex-basis: 20%;
+	flex-basis: 27%;
 	color: white;
 	text-align: center;
 	border-style: outset;
@@ -90,6 +90,20 @@ body {
 		font-size: 300%;
 	}
 	.card-img-top {
-		border-radius: 6% 6% 0% 0%;
+		border-radius:25px;
+		margin-top: 1%;
+	}
+	.card-block {
+		flex-direction: column;
+		display: flex;
+		height: 170px;
+		align-self: center;
+	}
+	.card-rating {
+		width: 200px;
+		height: auto;
+	}
+	a {
+		text-decoration: none;
 	}
 }

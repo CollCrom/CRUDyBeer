@@ -19,9 +19,11 @@
 			<input type="text" name="abv">%
 			<h4>Brewery</h4>
 			<input type="text" name="brewery"><br>
+			<h4>Brewery Picture</h4>
+			<input type="text" name="breweryImg"><br>
 			<h4>Rate This Beer!</h4>
 			<select name="rating">
-			<% for(i = 0; i < 5.5; i+= .5){ %>
+			<% for(i = 0; i < 6; i++){ %>
 				<option><%= i%></option>
 			<%}%>
 			</select>
