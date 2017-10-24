@@ -39,10 +39,12 @@ router.route('/new')
 			Beer.create(req.body, (err, beer)=>{
 				if(err)
 					res.send(err);
-				user.beer.push(beer);
-				user.save((err, data)=>{
-					res.render('user/profile', {user: user, userBeer: user.beer, logged: req.session.logged})	
-				})
+				else{
+					user.beer.push(beer);
+					user.save((err, data)=>{
+						res.render('user/profile', {user: user, userBeer: user.beer, logged: req.session.logged})
+					})	
+				}
 			})
 		})
 	})
