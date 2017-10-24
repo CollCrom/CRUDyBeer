@@ -14,43 +14,28 @@
 	
 		<form action="/beer/new" method="POST">
 			<div class='flex-container'>
-				<div class='row1 col1'>
-					<h4>The Name Of Your New Beer</h4>
-					<input type="text" name="name">
-				</div>
-				<div class='row1 col2'>
-					<h4>Beer Type (Lager, IPA, Wheat Ale, etc.)</h4>
-					<input type="text" name="type">
-				</div>
-				<div class='row2 col1'>
-					<h4>ABV</h4>
-					<p id="percent"><input type="text" name="abv">
-					%</p>
-				<div class="row2 col2">
-					<h4>Brewery</h4>
-					<input type="text" name="brewery">
-				</div>
-				</div>
-				<div class='row3 col1'>
-					<h4>Brewery Picture</h4>
-					<input type="text" name="breweryImg">
-				</div>
-				<div class="row3 col2"
-					<h4>Rate This Beer!</h4>
-					<select name="rating">
-						<option>Rating</option>
-					<% for(i = 0; i < 6; i++){ %>
-						<option><%= i%></option>
-					<%}%>
-					</select>
-				</div>
-				<div class="row4">
-
-					<h4>Comments About This Beer</h4>
-					<textarea name="review" onclick="this.focus();this.select()">Review goes here...</textarea>
-					<input type="hidden" name="reviewedBy" value="<%=username%>">
-					<input type="submit" name="Submit New Beer">
-				</div>
+				<h4>The Name Of Your New Beer</h4>
+				<input type="text" name="name">
+				<h4>Beer Type (Lager, IPA, Wheat Ale, etc.)</h4>
+				<input type="text" name="type">
+				<h4>ABV</h4>
+				<p class="percent"><input type="text" name="abv">
+				%</p>
+				<h4>Brewery</h4>
+				<input type="text" name="brewery">
+				<h4>Brewery Picture</h4>
+				<input type="text" name="breweryImg">
+				<h4>Rate This Beer!</h4>
+				<select name="rating">
+					<option>Rating</option>
+				<% for(i = 0; i < 6; i++){ %>
+					<option><%= i%></option>
+				<%}%>
+				</select>
+				<h4>Comments About This Beer</h4>
+				<textarea name="review" onclick="this.focus();this.select()">Review goes here...</textarea>
+				<input type="hidden" name="reviewedBy" value="<%=username%>">
+				<input class="btn btn-outline-success" type="submit" name="Submit New Beer">
 			</div>
 		</form>
 		

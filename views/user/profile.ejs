@@ -17,16 +17,23 @@
 						<div class="card-block">
 					    	<h4 class="card-title"><%= beer.name%></h4>
 				    	</div>
-				    	<h4 class='card-text'>Rating</h4>
-				    	<img class='card-rating' src="/images/stars/<%=beer.rating%>.png">
+				    	<img class='card-rating' src="/images/stars/<%=beer.rating%>.png"><br>
 					</a>
+					<% if(logged){%>
+						<button class="btn btn-outline-success" type="submit">
+							<a href="/beer/edit/<%=beer._id%>">Edit</a>
+						</button>
+						<button class="btn btn-outline-success" type="submit">
+							<a href="/beer/delete/<%=beer._id%>">Delete</a>	
+						</button>
+					<%}%>
 				</div>
 			<%})%>
 		</div>
 	</main>
 	<% if(logged){%>
 		<form action='/user/logout' method='POST'>
-			<input class="btn btn-outline-success" type="submit" value="Logout">
+			<input class="btn btn-logout btn-outline-success" type="submit" value="Logout">
 		</form>
 	<%}%>
 </body>

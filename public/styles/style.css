@@ -14,36 +14,35 @@ h5,
 h6 {
   color: white;
 }
-<<<<<<< HEAD
 h3 {
   font-size: 300%;
 }
-=======
->>>>>>> a2b92e65781b1d2c93921d7479e789813e93ec34
 p {
   color: white;
   font-size: 155%;
 }
-<<<<<<< HEAD
-=======
+input,
+textarea {
+  color: black;
+  background-color: rgba(241, 142, 28, 0.7);
+  font-family: 'Trocchi', serif;
+}
+textarea {
+  width: 40%;
+  height: 150px;
+}
+textarea::selection {
+  color: rgba(255, 251, 177, 0.7);
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(241, 142, 28, 0.7) inset;
+}
 .flex-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.row1,
-.row2,
-.row3 {
-  display: flex;
-  flex-direction: row;
-}
-.col1,
-.col2 .col3 {
-  display: flex;
-  flex-direction: column;
-}
->>>>>>> a2b92e65781b1d2c93921d7479e789813e93ec34
 .top-page-text {
   font-family: 'Lobster', cursive;
   font-size: 600%;
@@ -63,6 +62,7 @@ a:link {
   text-decoration: none;
 }
 .btn {
+  min-width: 128px;
   font-weight: 700;
   text-decoration: none;
   font-size: 2em;
@@ -89,7 +89,6 @@ a:link {
   flex-wrap: wrap;
   justify-content: center;
 }
-<<<<<<< HEAD
 .show-card {
   justify-content: center;
   background: rgba(106, 44, 12, 0.7);
@@ -103,8 +102,6 @@ a:link {
   max-width: 800px;
   margin: auto;
 }
-=======
->>>>>>> a2b92e65781b1d2c93921d7479e789813e93ec34
 .card {
   justify-content: center;
   height: 375px;
@@ -113,11 +110,7 @@ a:link {
   color: white;
   text-align: center;
   border-style: outset;
-<<<<<<< HEAD
   border-radius: 25px;
-=======
-  border-radius: 6%;
->>>>>>> a2b92e65781b1d2c93921d7479e789813e93ec34
   margin: .5%;
   font-size: 100%;
 }
@@ -137,7 +130,6 @@ a:link {
   height: 170px;
   align-self: center;
 }
-<<<<<<< HEAD
 .card a {
   text-decoration: none;
 }
@@ -145,16 +137,10 @@ a:link {
   width: 200px;
   height: auto;
 }
-=======
-.card .card-rating {
-  width: 200px;
-  height: auto;
-}
-.card a {
-  text-decoration: none;
-}
->>>>>>> a2b92e65781b1d2c93921d7479e789813e93ec34
 .new {
   margin-top: 10%;
   color: rgba(27, 16, 13, 0.7);
+}
+.percent {
+  font-size: 15px;
 }

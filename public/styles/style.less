@@ -31,9 +31,22 @@ p{
 	color: white;
 	font-size: 155%;
 }
+input, textarea{
+	color: black;
+	background-color: @kulerLightOrange;
+	font-family: @baseFont;
+}
+textarea{
+	width: 40%;
+	height: 150px;
+}
+textarea::selection{
+	color: @kulerCream;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px @kulerLightOrange inset;
+}
 
-<<<<<<< HEAD
-=======
 .flex-container{
 
 	display: flex;
@@ -41,25 +54,7 @@ p{
 	flex-direction: column;
 	align-items: center;
 }
-.row1, .row2, .row3 {
-	display: flex;
-	flex-direction: row;
 
-}
-.col1, .col2 .col3 {
-	display: flex;
-	flex-direction: column;
-}
-// .row4{
-// 	display: flex;
-// 	justify-content: center;
-// }
-// #percent{
-
-// 	font-size: 15px;
-// }
-
->>>>>>> a2b92e65781b1d2c93921d7479e789813e93ec34
 .top-page-text {
 	font-family: @headerFont;
 	font-size: 600%;
@@ -81,7 +76,7 @@ a:link{
 }
 
 .btn{
-
+	min-width: 128px;
 	font-weight: 700;
 	text-decoration: none;
 	font-size: 2em;
@@ -103,14 +98,7 @@ a:link{
 }
 
 .btn:focus{
-
 	outline: 0;
-}
-
-.loginBtn{
-
-
-
 }
 
 .card-deck {
@@ -173,4 +161,7 @@ a:link{
 	color: @kulerDarkBrown;
 }
 
+.percent {
+	font-size: 15px;
+}
 
