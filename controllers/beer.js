@@ -25,6 +25,8 @@ router.route('/new')
 	.post((req, res)=>{
 		if(!req.body.breweryImg)
 			req.body.breweryImg = '/images/placeholderImg.jpg';
+		if(req.body.rating === 'rating')
+			req.body.rating = 0;
 		User.findOne({username: req.session.username},(err, user)=>{
 			for(el in req.body){
 				if(el === 'breweryImg')
@@ -53,6 +55,8 @@ router.route('/edit/:id')
 		})
 	})
 	.put((req, res)=>{
+		if(req.body.rating === 0)
+			req.body.rating = 0;
 		Beer.findByIdAndUpdate(req.params.id, req.body,(err, beer)=>{
 			res.render('beer/show', {beer: beer, username: req.session.username, logged: req.session.logged})
 		})
@@ -75,7 +79,7 @@ router.route('/delete/:id')
 			User.findOne({'beer._id': req.params.id}, (err, foundUser)=>{
 				foundUser.beer.id(req.params.id).remove();
 				foundUser.save((err,data)=>{
-					res.redirect('/beer')
+					res.redirect('/user')
 				})
 			})
 		})

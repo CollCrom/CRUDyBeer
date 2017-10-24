@@ -23,11 +23,12 @@
 			<input type="text" name="breweryImg"><br>
 			<h4>Rate This Beer!</h4>
 			<select name="rating">
+				<option>Rating</option>
 			<% for(i = 0; i < 6; i++){ %>
 				<option><%= i%></option>
 			<%}%>
 			</select>
-			<h4>"Comments About This Beer"</h4>
+			<h4>Comments About This Beer</h4>
 			<textarea name="review" onclick="this.focus();this.select()">Review goes here...</textarea><br>
 			<input type="hidden" name="reviewedBy" value="<%=username%>">
 			<input type="submit" name="Submit New Beer">

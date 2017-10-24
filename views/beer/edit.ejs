@@ -18,7 +18,8 @@
 				<input type="text" name="brewery" value="<%=beer.brewery%>"><br>
 				<h4>Rate This Beer!</h4>
 				<select name="rating" value="<%=beer.rating%>">
-				<% for(i = 0; i < 5.5; i+= .5){ %>
+					<option>Rating</option>
+				<% for(i = 0; i < 6; i++){ %>
 					<option><%= i%></option>
 				<%}%>
 				</select>

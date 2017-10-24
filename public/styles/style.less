@@ -10,31 +10,28 @@
 @kulerDarkOrange: rgba(203, 89, 9, 0.7);
 @kulerLightOrange: rgba(241, 142, 28, 0.7);
 @kulerCream: rgba(255, 251, 177, 0.7);
-
+@headerFont: 'Lobster', cursive;
 body {
 	margin: auto 0;
 	text-align: center;
       /* Full height */
     height: 100%; 
     background-image: url("../images/cardBackground.jpg");
-    h1, h2, h3, h4, h5, h6, p, a {
-    	color : white;
-    }
 }
 
+h1, h2, h3, h4, h5, h6, p, a {
+    color : white;
+}
+header {
+	font-family: @headerFont;
+}
 .navbar{
 	border-style: solid; 
-	// border-width: 0 0 5px 0;
 	margin-top: 1%;
 	text-align: @text-align;
 
-	
-
-
 	a:link{
-		text-decoration: none;
-		
-		
+		text-decoration: none;		
 	}
 
 	a{
@@ -44,7 +41,6 @@ body {
 }
 
 .btn{
-  overflow: hidden;
   font-weight: 700;
   
   text-decoration: none;
@@ -54,9 +50,7 @@ body {
   background-repeat: repeat-x;
   border-radius: 50px;
   box-shadow: inset 4px 3px 0px 0px @kulerLightBrown;
-  transition: background-color 1000ms;
-
- 
+  transition: 750ms;
 }
 
 .btn:hover{
@@ -105,5 +99,23 @@ body {
 	}
 	a {
 		text-decoration: none;
+	}
+}
+
+.styled-select.slate {
+	background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+	height: 34px;
+    width: 240px;
+}
+
+.styled-select.slate {
+	select {
+		
+	display: flex;
+	justify-content: center;
+	   border: 1px solid #ccc;
+	   font-size: 16px;
+	   height: 34px;
+	   width: 268px;
 	}
 }
