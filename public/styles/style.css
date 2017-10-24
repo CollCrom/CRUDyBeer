@@ -40,9 +40,11 @@ a:link {
   border-radius: 50px;
   box-shadow: inset 4px 3px 0px 0px rgba(106, 44, 12, 0.7);
   transition: 750ms;
+  color: black;
 }
 .btn:hover {
   background-color: rgba(203, 89, 9, 0.7);
+  color: white;
 }
 .btn:hover a {
   color: white;

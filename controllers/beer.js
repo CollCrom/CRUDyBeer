@@ -50,7 +50,6 @@ router.route('/new')
 router.route('/edit/:id')
 	.get((req, res)=>{
 		Beer.findById(req.params.id, (err, beer)=>{
-			console.log(beer);
 			res.render('beer/edit', {beer: beer})
 		})
 	})
