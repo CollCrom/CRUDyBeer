@@ -11,12 +11,15 @@
 @kulerLightOrange: rgba(241, 142, 28, 0.7);
 @kulerCream: rgba(255, 251, 177, 0.7);
 @headerFont: 'Lobster', cursive;
+@baseFont: 'Trocchi', serif;
+
 body {
 	margin: auto 0;
 	text-align: center;
       /* Full height */
     height: 100%; 
     background-image: url("../images/cardBackground.jpg");
+    font-family: @baseFont;
 }
 h1,h2,h3,h4,h5,h6 {
 	color: white;
@@ -32,8 +35,9 @@ p{
 
 }
 
-header {
+.top-page-text {
 	font-family: @headerFont;
+	font-size: 600%;
 }
 a {
 	color: black;
