@@ -11,14 +11,15 @@
 	<% if(!logged){%>
 		<h3>Login</h3>
 		<form action='/user/login' method='POST'>
-			Username: <input type="text" name="username">
-			Password: <input type="password" name="password">
+			<p>Username: <input type="text" name="username"></p>
+			<p>Password: <input type="password" name="password"></p>
 			<button class="btn btn-outline-success" >Login</button>
-			<%=loginMessage%>
+			<p><%=loginMessage%></p>
 		</form>
-		<button class="btn btn-outline-success" >
+		<button class="btn loginBtn btn-outline-success" >
 			<a href="/user/register">Create New Account</a>
 		</button>
+
 	<%}%>
 	<% if(logged){%>
 		<form action='/user/logout' method='POST'>

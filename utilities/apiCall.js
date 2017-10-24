@@ -24,7 +24,7 @@ const apiCall = () => {
 				beerObj.breweryImg = beer.breweries[0].images.medium;
 				beerObj.rating = Math.floor(Math.random()*6)
 				Beer.findOne(beerObj, (err, beer)=>{
-					if(beer){
+					if(!beer){
 						Beer.create(beerObj, (err, beer)=>{
 							if(err)
 								console.log(err)

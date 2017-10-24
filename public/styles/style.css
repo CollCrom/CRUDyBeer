@@ -13,6 +13,10 @@ h5,
 h6 {
   color: white;
 }
+p {
+  color: white;
+  font-size: 155%;
+}
 header {
   font-family: 'Lobster', cursive;
 }
@@ -48,6 +52,9 @@ a:link {
 }
 .btn:hover a {
   color: white;
+}
+.btn:focus {
+  outline: 0;
 }
 .card-deck {
   display: flex;
