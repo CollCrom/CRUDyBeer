@@ -27,6 +27,10 @@ textarea {
   background-color: rgba(241, 142, 28, 0.7);
   font-family: 'Trocchi', serif;
 }
+input {
+  width: 300px;
+  height: 40px;
+}
 textarea {
   width: 40%;
   height: 150px;
@@ -62,7 +66,8 @@ a:link {
   text-decoration: none;
 }
 .btn {
-  min-width: 128px;
+  width: 150px;
+  height: 10%;
   font-weight: 700;
   text-decoration: none;
   font-size: 2em;
@@ -138,7 +143,7 @@ a:link {
   height: auto;
 }
 .new {
-  margin-top: 10%;
+  margin-top: 2%;
   color: rgba(27, 16, 13, 0.7);
 }
 .percent {

@@ -8,25 +8,42 @@
 	<h1 class='top-page-text'>Edit Your Review</h1>
 	<main>
 		<form action="/beer/edit/<%=beer._id%>?_method=PUT" method="POST">
-				<h4>Beer Name</h4>
-				<input type="text" name="name" value="<%=beer.name%>"><br>
-				<h4>Beer Type (Lager, IPA, Wheat Ale, etc.)</h4>
-				<input type="text" name="type" value=<%=beer.type%>><br>
-				<h4>ABV</h4>
-				<p class="percent"><input type="text" name="abv" value="<%=beer.abv%>">%</p>
-				<h4>Brewery</h4>
-				<input type="text" name="brewery" value="<%=beer.brewery%>"><br>
-				<h4>Rate This Beer!</h4>
-				<select name="rating" value="<%=beer.rating%>">
-					<option>Rating</option>
-				<% for(i = 0; i < 6; i++){ %>
-					<option><%= i%></option>
-				<%}%>
-				</select>
-				<h4>Comments About This Beer</h4>
-				<textarea name="review"><%=beer.review%></textarea><br>
-				<input class="btn btn-outline-success" type="submit" name="Edit This Beer">			
-			</form>
+
+			<div class="container"'>
+				<div class='row'>
+					<div class="col-sm-6">
+						<h4>Beer Name</h4>
+						<input type="text" name="name" value="<%=beer.name%>"><br>
+					</div>
+
+					<div class="col-sm-6">
+						<h4>Beer Type (Lager, IPA, Wheat Ale, etc.)</h4>
+						<input type="text" name="type" value=<%=beer.type%>><br>
+					</div>
+					<div class="col-sm-6">
+						<h4>ABV</h4>
+						<p class="percent"><input type="text" name="abv" value="<%=beer.abv%>"></p>
+					</div>
+					<div class="col-sm-6">
+						<h4>Brewery</h4>
+						<input type="text" name="brewery" value="<%=beer.brewery%>"><br>
+					</div>
+					<div class="col-sm-12">	
+						<h4>Rate This Beer!</h4>
+						<select name="rating" value="<%=beer.rating%>">
+							<option>Rating</option>
+						<% for(i = 0; i < 6; i++){ %>
+							<option><%= i%></option>
+						<%}%>
+						</select>
+						<h4>Comments About This Beer</h4>
+						<textarea name="review"><%=beer.review%></textarea><br>
+						<input class="btn btn-outline-success" type="submit" name="Edit This Beer">	
+					</div>
+				</div>
+			</div>
+				
+		</form>
 	</main>
 </body>
 </html>
