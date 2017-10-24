@@ -1,1 +1,89 @@
-body{margin:auto 0;text-align:center;height:100%;background-image:url(../images/cardBackground.jpg)}a,h1,h2,h3,h4,h5,h6,p{color:#fff}header{font-family:Lobster,cursive}.navbar{border-style:solid;margin-top:1%;text-align:center}.navbar a:link{text-decoration:none}.navbar a{color:#000}.btn{font-weight:700;text-decoration:none;font-size:2em;background-color:rgba(255,251,177,.7);background-position:0 -50%;background-repeat:repeat-x;border-radius:50px;box-shadow:inset 4px 3px 0 0 rgba(106,44,12,.7);transition:750ms}.btn:hover{background-color:rgba(203,89,9,.7)}.btn:hover a{color:#fff}.card-deck{display:flex;flex-wrap:wrap;justify-content:center}.card{justify-content:center;height:375px;background:rgba(106,44,12,.7);flex-basis:27%;color:#fff;text-align:center;border-style:outset;border-radius:6%;margin:.5%;font-size:100%}.card .card-text{font-size:200%}.card .card-title{font-size:300%}.card .card-img-top{border-radius:25px;margin-top:1%}.card .card-block{flex-direction:column;display:flex;height:170px;align-self:center}.card .card-rating{width:200px;height:auto}.card a{text-decoration:none}.styled-select.slate{background:url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;height:34px;width:240px}.styled-select.slate select{display:flex;justify-content:center;border:1px solid #ccc;font-size:16px;height:34px;width:268px}
+body {
+  margin: auto 0;
+  text-align: center;
+  /* Full height */
+  height: 100%;
+  background-image: url("../images/cardBackground.jpg");
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+}
+header {
+  font-family: 'Lobster', cursive;
+}
+a {
+  color: black;
+}
+a:link {
+  text-decoration: none;
+}
+.navbar {
+  border-style: solid;
+  margin-top: 1%;
+  text-align: center;
+}
+.navbar a:link {
+  text-decoration: none;
+}
+.btn {
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  background-color: rgba(255, 251, 177, 0.7);
+  background-position: 0 -50%;
+  background-repeat: repeat-x;
+  border-radius: 50px;
+  box-shadow: inset 4px 3px 0px 0px rgba(106, 44, 12, 0.7);
+  transition: 750ms;
+}
+.btn:hover {
+  background-color: rgba(203, 89, 9, 0.7);
+}
+.btn:hover a {
+  color: white;
+}
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  justify-content: center;
+  height: 375px;
+  background: rgba(106, 44, 12, 0.7);
+  flex-basis: 27%;
+  color: white;
+  text-align: center;
+  border-style: outset;
+  border-radius: 6%;
+  margin: .5%;
+  font-size: 100%;
+}
+.card .card-text {
+  font-size: 200%;
+}
+.card .card-title {
+  font-size: 300%;
+}
+.card .card-img-top {
+  border-radius: 25px;
+  margin-top: 1%;
+}
+.card .card-block {
+  flex-direction: column;
+  display: flex;
+  height: 170px;
+  align-self: center;
+}
+.card .card-rating {
+  width: 200px;
+  height: auto;
+}
+.card a {
+  text-decoration: none;
+}

@@ -18,12 +18,18 @@ body {
     height: 100%; 
     background-image: url("../images/cardBackground.jpg");
 }
-
-h1, h2, h3, h4, h5, h6, p, a {
-    color : white;
+h1,h2,h3,h4,h5,h6 {
+	color: white;
 }
+
 header {
 	font-family: @headerFont;
+}
+a {
+	color: black;
+}
+a:link{
+	text-decoration: none;		
 }
 .navbar{
 	border-style: solid; 
@@ -33,24 +39,18 @@ header {
 	a:link{
 		text-decoration: none;		
 	}
-
-	a{
-		color: black;
-	}
-
 }
 
 .btn{
-  font-weight: 700;
-  
-  text-decoration: none;
-  font-size: 2em;
-  background-color: @kulerCream;
-  background-position: 0 -50%;
-  background-repeat: repeat-x;
-  border-radius: 50px;
-  box-shadow: inset 4px 3px 0px 0px @kulerLightBrown;
-  transition: 750ms;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 2em;
+	background-color: @kulerCream;
+	background-position: 0 -50%;
+	background-repeat: repeat-x;
+	border-radius: 50px;
+	box-shadow: inset 4px 3px 0px 0px @kulerLightBrown;
+	transition: 750ms;
 }
 
 .btn:hover{
@@ -99,23 +99,5 @@ header {
 	}
 	a {
 		text-decoration: none;
-	}
-}
-
-.styled-select.slate {
-	background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
-	height: 34px;
-    width: 240px;
-}
-
-.styled-select.slate {
-	select {
-		
-	display: flex;
-	justify-content: center;
-	   border: 1px solid #ccc;
-	   font-size: 16px;
-	   height: 34px;
-	   width: 268px;
 	}
 }
