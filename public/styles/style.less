@@ -4,7 +4,7 @@
 @red: red;
 @transition: 0.3s linear;
 
-@borderRadius: 6%;
+@borderRadius: 25px;
 @kulerLightBrown: rgba(106, 44, 12, 0.7);
 @kulerDarkBrown: rgba(27, 16, 13, 0.7);
 @kulerDarkOrange: rgba(203, 89, 9, 0.7);
@@ -24,15 +24,36 @@ body {
 h1,h2,h3,h4,h5,h6 {
 	color: white;
 }
+h3{
+ font-size: 300%;
+}
 p{
 	color: white;
 	font-size: 155%;
 }
+input, textarea{
+	color: black;
+	background-color: @kulerLightOrange;
+	font-family: @baseFont;
+}
+textarea{
+	width: 40%;
+	height: 150px;
+}
+textarea::selection{
+	color: @kulerCream;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px @kulerLightOrange inset;
+}
 
-// #percent{
+.flex-container{
 
-// 	font-size: 15px;
-// }
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
 
 .top-page-text {
 	font-family: @headerFont;
@@ -55,7 +76,7 @@ a:link{
 }
 
 .btn{
-
+	min-width: 128px;
 	font-weight: 700;
 	text-decoration: none;
 	font-size: 2em;
@@ -77,20 +98,26 @@ a:link{
 }
 
 .btn:focus{
-
 	outline: 0;
-}
-
-.loginBtn{
-
-
-
 }
 
 .card-deck {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+.show-card {
+	justify-content: center;
+	background: @kulerLightBrown;
+	height: 100%;
+	color: white;
+	text-align: center;
+	border-style: outset;
+	border-radius: @borderRadius;
+	margin: .5%;
+	font-size: 100%;
+	max-width: 800px;
+	margin: auto;
 }
 
 .card {
@@ -120,14 +147,13 @@ a:link{
 		height: 170px;
 		align-self: center;
 	}
-	.card-rating {
-		width: 200px;
-		height: auto;
-	}
 	a {
 		text-decoration: none;
 	}
-
+}
+.card-rating {
+	width: 200px;
+	height: auto;
 }
 
 .new{
@@ -135,4 +161,7 @@ a:link{
 	color: @kulerDarkBrown;
 }
 
+.percent {
+	font-size: 15px;
+}
 

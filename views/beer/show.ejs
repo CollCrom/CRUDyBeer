@@ -7,12 +7,16 @@
 	<% include ../partials/nav%>
 	<%=username%>
 	<section>
-		<h1><%= beer.name%></h1>
-		<p class='showText'>Type: <%= beer.type%><br>
-		ABV: <%= beer.abv%>%<br>
-		Brewery: <%= beer.brewery%><br>
-		Rating: <%= beer.rating%>/5<br>
-		Review: <%= beer.review%><br></p>
+		<div class='show-card'>
+			<h1><%= beer.name%></h1>
+			<p class='showText'>
+				Type: <%= beer.type%><br>
+				ABV: <%= beer.abv%>%<br>
+				Brewery: <%= beer.brewery%><br><br>
+				<img class='card-rating' src="/images/stars/<%=beer.rating%>.png"><br><br>
+				Review: <%= beer.review%><br><br>
+			</p>
+		</div>
 	</section>
 	<% if(logged && beer.reviewedBy === username){%>
 		<a href="/beer/edit/<%=beer._id%>">Edit this beer</a><br>

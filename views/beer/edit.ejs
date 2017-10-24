@@ -13,7 +13,7 @@
 				<h4>Beer Type (Lager, IPA, Wheat Ale, etc.)</h4>
 				<input type="text" name="type" value=<%=beer.type%>><br>
 				<h4>ABV</h4>
-				<input type="text" name="abv" value="<%=beer.abv%>">%
+				<p class="percent"><input type="text" name="abv" value="<%=beer.abv%>">%</p>
 				<h4>Brewery</h4>
 				<input type="text" name="brewery" value="<%=beer.brewery%>"><br>
 				<h4>Rate This Beer!</h4>
@@ -25,7 +25,7 @@
 				</select>
 				<h4>Comments About This Beer</h4>
 				<textarea name="review"><%=beer.review%></textarea><br>
-				<input type="submit" name="Edit This Beer">			
+				<input class="btn btn-outline-success" type="submit" name="Edit This Beer">			
 			</form>
 	</main>
 </body>

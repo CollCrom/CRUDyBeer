@@ -6,11 +6,10 @@
 <body>
 	<% include partials/nav %>
 	<header>
-		<h1 class='top-page-text'>Welcome to CRUDy Beer Reviews!</h1>
+		<h1 class='top-page-text'>Welcome to CRUDy Beer Reviews!</h1><br><br>
 	</header>
 	<% if(!logged){%>
-		<h3>Login</h3>
-		<form action='/user/login' method='POST'>
+		<form action='/user/login' method='POST'>r
 			<p>Username: <br><input type="text" name="username"></p>
 			<p>Password:<br> <input type="password" name="password"></p>
 			<button class="btn btn-outline-success" >Login</button>
