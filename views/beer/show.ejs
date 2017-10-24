@@ -8,11 +8,11 @@
 	<%=username%>
 	<section>
 		<h1><%= beer.name%></h1>
-		Type: <%= beer.type%><br>
+		<p class='showText'>Type: <%= beer.type%><br>
 		ABV: <%= beer.abv%>%<br>
 		Brewery: <%= beer.brewery%><br>
 		Rating: <%= beer.rating%>/5<br>
-		Review: <%= beer.review%><br>
+		Review: <%= beer.review%><br></p>
 	</section>
 	<% if(logged && beer.reviewedBy === username){%>
 		<a href="/beer/edit/<%=beer._id%>">Edit this beer</a><br>
