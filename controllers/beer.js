@@ -23,8 +23,14 @@ router.route('/new')
 		}
 	})
 	.post((req, res)=>{
+		if(!req.body.breweryImg)
+			req.body.breweryImg = '/images/placeholderImg.jpg';
+		if(req.body.rating === 'rating')
+			req.body.rating = 0;
 		User.findOne({username: req.session.username},(err, user)=>{
 			for(el in req.body){
+				if(el === 'breweryImg')
+					continue;
 				if(!req.body[el]){
 					res.render('beer/new', {errorMessage: 'Field cannot be empty', username: req.session.username})
 					break;
@@ -44,11 +50,12 @@ router.route('/new')
 router.route('/edit/:id')
 	.get((req, res)=>{
 		Beer.findById(req.params.id, (err, beer)=>{
-			console.log(beer);
 			res.render('beer/edit', {beer: beer})
 		})
 	})
 	.put((req, res)=>{
+		if(req.body.rating === 0)
+			req.body.rating = 0;
 		Beer.findByIdAndUpdate(req.params.id, req.body,(err, beer)=>{
 			res.render('beer/show', {beer: beer, username: req.session.username, logged: req.session.logged})
 		})
@@ -62,6 +69,18 @@ router.route('/:id')
 			}else{
 				res.render('beer/show', {beer: beer, username: req.session.username, logged: req.session.logged})
 			}
+		})
+	})
+
+router.route('/delete/:id')
+	.get((req, res)=>{
+		Beer.findByIdAndRemove(req.params.id, (err, beer)=>{
+			User.findOne({'beer._id': req.params.id}, (err, foundUser)=>{
+				foundUser.beer.id(req.params.id).remove();
+				foundUser.save((err,data)=>{
+					res.redirect('/user')
+				})
+			})
 		})
 	})
 

@@ -22,10 +22,14 @@ const apiCall = () => {
 				beerObj.review = beer.description;
 				beerObj.brewery = beer.breweries[0].name;
 				beerObj.breweryImg = beer.breweries[0].images.medium;
-				beerObj.rating = Math.floor(Math.random()*10) / 2;
-				Beer.create(beerObj, (err, beer)=>{
-					if(err)
-						res.send(err)
+				beerObj.rating = Math.floor(Math.random()*6)
+				Beer.findOne(beerObj, (err, beer)=>{
+					if(beer){
+						Beer.create(beerObj, (err, beer)=>{
+							if(err)
+								console.log(err)
+						})
+					}
 				})
 			}
 		})

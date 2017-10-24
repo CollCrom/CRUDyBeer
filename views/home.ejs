@@ -13,16 +13,16 @@
 		<form action='/user/login' method='POST'>
 			Username: <input type="text" name="username">
 			Password: <input type="password" name="password">
-			<button>Login</button>
+			<button class="btn btn-outline-success" >Login</button>
 			<%=loginMessage%>
 		</form>
-		<button>
+		<button class="btn btn-outline-success" >
 			<a href="/user/register">Create New Account</a>
 		</button>
 	<%}%>
 	<% if(logged){%>
 		<form action='/user/logout' method='POST'>
-			<input type="submit" value="Logout">
+			<input class="btn btn-outline-success" type="submit" value="Logout">
 		</form>
 	<%}%>
 </body>

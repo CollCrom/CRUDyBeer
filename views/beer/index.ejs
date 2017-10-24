@@ -12,14 +12,14 @@
 	<div class="card-deck">
 		<%beers.forEach((beer)=>{%>
 			<div class="card">
-			    <img class="card-img-top" src="<%=beer.breweryImg%>" alt="Card image cap">
-			    <div class="card-block">
-				    <h4 class="card-title"><%= beer.name%></h4>
-				    <h4 class="card-text">Rating: <%= beer.rating%>/5</h4>
-				    <button id='card-btn'>
-				    	<a href="/beer/<%=beer._id%>" class='card-link'>Read More</a>
-				    </button>
-			    </div>
+				<a href="/beer/<%=beer._id%>">
+				    <img class="card-img-top" src="<%=beer.breweryImg%>" alt="Card image cap">
+				    <div class="card-block">
+					    <h4 class="card-title"><%= beer.name%></h4>
+				    </div>
+				    <h4 class='card-text'>Rating</h4>
+				    <img class='card-rating' src="/images/stars/<%=beer.rating%>.png">
+				</a>
 			</div>
 		<%})%>
 	</div>
