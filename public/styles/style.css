@@ -4,6 +4,7 @@ body {
   /* Full height */
   height: 100%;
   background-image: url("../images/cardBackground.jpg");
+  font-family: 'Trocchi', serif;
 }
 h1,
 h2,
@@ -13,8 +14,9 @@ h5,
 h6 {
   color: white;
 }
-header {
+.top-page-text {
   font-family: 'Lobster', cursive;
+  font-size: 600%;
 }
 a {
   color: black;
