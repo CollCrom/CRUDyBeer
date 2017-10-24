@@ -4,7 +4,7 @@
 @red: red;
 @transition: 0.3s linear;
 
-@borderRadius: 6%;
+@borderRadius: 25px;
 @kulerLightBrown: rgba(106, 44, 12, 0.7);
 @kulerDarkBrown: rgba(27, 16, 13, 0.7);
 @kulerDarkOrange: rgba(203, 89, 9, 0.7);
@@ -24,15 +24,12 @@ body {
 h1,h2,h3,h4,h5,h6 {
 	color: white;
 }
+h3{
+ font-size: 300%;
+}
 p{
 	color: white;
 	font-size: 155%;
-}
-
-.showText{
-
-	
-
 }
 
 .top-page-text {
@@ -93,6 +90,19 @@ a:link{
 	flex-wrap: wrap;
 	justify-content: center;
 }
+.show-card {
+	justify-content: center;
+	background: @kulerLightBrown;
+	height: 100%;
+	color: white;
+	text-align: center;
+	border-style: outset;
+	border-radius: @borderRadius;
+	margin: .5%;
+	font-size: 100%;
+	max-width: 800px;
+	margin: auto;
+}
 
 .card {
 	justify-content: center;
@@ -121,14 +131,13 @@ a:link{
 		height: 170px;
 		align-self: center;
 	}
-	.card-rating {
-		width: 200px;
-		height: auto;
-	}
 	a {
 		text-decoration: none;
 	}
-
+}
+.card-rating {
+	width: 200px;
+	height: auto;
 }
 
 .new{
