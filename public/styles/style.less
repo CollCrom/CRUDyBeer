@@ -47,7 +47,10 @@ textarea{
 	width: 40%;
 	height: 150px;
 }
-textarea::selection{
+input::selection, textarea::selection{
+	color: @kulerCream;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	color: @kulerCream;
 }
 input:-webkit-autofill {
@@ -198,6 +201,7 @@ a, a:link, a.visited, a:focus{
 
 
 
+
 /* main container */
 .container1{
 	top: 10px;
@@ -295,6 +299,7 @@ a, a:link, a.visited, a:focus{
 
 
  
+
 
 
 
