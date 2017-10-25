@@ -18,7 +18,7 @@
 						<input type="text" name="name">
 					</div>
 					<div class='col-sm-6'>
-						<h4>Beer Type (Lager, IPA, Wheat Ale, etc.)</h4>
+						<h4>Beer Type (Lager, IPA, etc.)</h4>
 						<input type="text" name="type">
 					</div>
 				</div>
@@ -37,21 +37,15 @@
 						<h4>Brewery Picture</h4>
 						<input type="text" name="breweryImg">
 					</div>
-					<div class='col-sm-6'>
+					<div class='col-sm-6 flex-container'>
 						<h4>Rate This Beer!</h4>
-						<div class="mainselection">
-							<select name="rating">
-								<option>Rating</option>
-							<% for(i = 0; i < 6; i++){ %>
-								<option><%= i%></option>
-							<%}%>
-							</select>
-						</div>
+						<div id="rateYo"></div>
+						<input class='rating' type="hidden" name="rating" value='0'>
 					</div>
 				</div>		
 				<div>
 					<h4>Comments About This Beer</h4>
-					<textarea name="review" onclick="this.focus();this.select()">Review goes here...</textarea>
+					<textarea name="review" placeholder="Review goes here..."></textarea>
 					<input type="hidden" name="reviewedBy" value="<%=username%>"><br>
 				</div>
 			</div>

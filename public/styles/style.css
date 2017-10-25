@@ -40,7 +40,12 @@ textarea {
   width: 40%;
   height: 150px;
 }
+input::selection,
 textarea::selection {
+  color: rgba(255, 251, 177, 0.7);
+}
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
   color: rgba(255, 251, 177, 0.7);
 }
 input:-webkit-autofill {
@@ -172,4 +177,8 @@ a:focus {
   width: 300px;
   height: 40px;
   background: rgba(241, 142, 28, 0.7);
+}
+#rateYo {
+  margin: 0;
+  text-align: center;
 }

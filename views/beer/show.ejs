@@ -10,17 +10,21 @@
 		<div class='show-card'>
 			<h1><%= beer.name%></h1>
 			<p class='showText'>
-				Type: <%= beer.type%><br>
-				ABV: <%= beer.abv%><br>
-				Brewery: <%= beer.brewery%><br><br>
+				<strong>Type:</strong> <%= beer.type%><br>
+				<strong>ABV:</strong> <%= beer.abv%><br>
+				<strong>Brewery:</strong> <%= beer.brewery%><br><br>
 				<img class='card-rating' src="/images/stars/<%=beer.rating%>.png"><br><br>
-				Review: <%= beer.review%><br><br>
+				<strong>Review:</strong> <%= beer.review%><br><br>
 			</p>
 		</div>
 	</section>
 	<% if(logged && beer.reviewedBy === username){%>
-		<a href="/beer/edit/<%=beer._id%>">Edit this beer</a><br>
-		<a href="/beer/delete/<%=beer._id%>">Delete this beer</a><br>
+		<button class="btn btn-outline-success" type="submit">
+			<a href="/beer/edit/<%=beer._id%>">Edit</a>
+		</button>
+		<button class="btn btn-outline-success" type="submit">
+			<a href="/beer/delete/<%=beer._id%>">Delete</a>
+		</button>
 	<%}%>
 </body>
 </html>

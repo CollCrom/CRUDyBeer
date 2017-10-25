@@ -12,32 +12,26 @@
 				<div class='row'>
 					<div class="col-sm-6">
 						<h4>Beer Name</h4>
-						<input type="text" name="name" value="<%=beer.name%>"><br>
+						<input type="text" name="name" onclick="this.focus();this.select()" value="<%=beer.name%>"><br>
 					</div>
 					<div class="col-sm-6">
-						<h4>Beer Type (Lager, IPA, Wheat Ale, etc.)</h4>
-						<input type="text" name="type" value=<%=beer.type%>><br>
+						<h4>Beer Type (Lager, IPA, etc.)</h4>
+						<input type="text" name="type" onclick="this.focus();this.select()" value=<%=beer.type%>><br>
 					</div>
 					<div class="col-sm-6">
 						<h4>ABV</h4>
-						<p class="percent"><input type="text" name="abv" value="<%=beer.abv%>"></p>
+						<p class="percent"><input type="text" name="abv" onclick="this.focus();this.select()" value="<%=beer.abv%>"></p>
 					</div>
 					<div class="col-sm-6">
 						<h4>Brewery</h4>
-						<input type="text" name="brewery" value="<%=beer.brewery%>"><br>
+						<input type="text" name="brewery" onclick="this.focus();this.select()" value="<%=beer.brewery%>"><br>
 					</div>
-					<div class="col-sm-12">	
+					<div class="col-sm-12 flex-container">	
 						<h4>Rate This Beer!</h4>
-						<div class='mainselection'>
-							<select name="rating">
-								<option>Rating</option>
-							<% for(i = 0; i < 6; i++){ %>
-								<option><%= i%></option>
-							<%}%>
-							</select>
-						</div>
+						<div id="rateYo"></div>
+						<input class='rating' type="hidden" name="rating" value=<%=beer.rating%>>
 						<h4>Comments About This Beer</h4>
-						<textarea name="review"><%=beer.review%></textarea><br>
+						<textarea name="review" onclick="this.focus();this.select()"><%=beer.review%></textarea><br>
 						<input class="btn btn-outline-success" type="submit" name="Edit This Beer">	
 					</div>
 				</div>
