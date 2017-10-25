@@ -27,7 +27,14 @@ router.route('/register')
 			if(user !== null)
 				res.render('user/register', {loginMessage: 'error creating user'})
 			else{
-				User.create(req.body, (err, user)=>{
+				const password = req.body.password;
+				const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+				console.log(passwordHash);
+				console.log(password);
+				const userDBentry = {};
+				userDBentry.username = req.body.username;
+				userDBentry.password = passwordHash;
+				User.create(userDBentry, (err, user)=>{
 					if(err)
 						res.send(err)
 					else{
@@ -46,14 +53,14 @@ router.route('/login')
 		User.findOne({username: req.body.username}, (err, user)=>{
 			if(err)
 				res.send(err);
-			if(!user)
-				res.render('home', {loginMessage: `Can't log in`, logged: req.session.logged})
-			else {
+			if(bcrypt.compareSync(req.body.password, user.password)){
 				req.session.logged = true;
 				req.session.username = user.username;
 				req.session.id = user._id;
 				res.render('user/profile', {user: user, userBeer: user.beer, logged: req.session.logged})
 			}
+			else
+				res.render('home', {loginMessage: `Can't log in`, logged: req.session.logged});
 		})
 	})
 

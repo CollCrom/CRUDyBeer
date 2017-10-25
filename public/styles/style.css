@@ -41,7 +41,7 @@ textarea {
   height: 150px;
 }
 textarea::selection {
-  color: black;
+  color: rgba(255, 251, 177, 0.7);
 }
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px rgba(241, 142, 28, 0.7) inset;
