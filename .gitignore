@@ -1,3 +1,7 @@
 node_modules
 .env
-style.css
+
+public/styles/style.css
+
+
+

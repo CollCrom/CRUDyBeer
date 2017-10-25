@@ -8,15 +8,12 @@
 	<h1 class='top-page-text'>Edit Your Review</h1>
 	<main>
 		<form action="/beer/edit/<%=beer._id%>?_method=PUT" method="POST">
-
-
 			<div class="container"'>
 				<div class='row'>
 					<div class="col-sm-6">
 						<h4>Beer Name</h4>
 						<input type="text" name="name" value="<%=beer.name%>"><br>
 					</div>
-
 					<div class="col-sm-6">
 						<h4>Beer Type (Lager, IPA, Wheat Ale, etc.)</h4>
 						<input type="text" name="type" value=<%=beer.type%>><br>
@@ -31,19 +28,20 @@
 					</div>
 					<div class="col-sm-12">	
 						<h4>Rate This Beer!</h4>
-						<select name="rating" value="<%=beer.rating%>">
-							<option>Rating</option>
-						<% for(i = 0; i < 6; i++){ %>
-							<option><%= i%></option>
-						<%}%>
-						</select>
+						<div class='mainselection'>
+							<select name="rating">
+								<option>Rating</option>
+							<% for(i = 0; i < 6; i++){ %>
+								<option><%= i%></option>
+							<%}%>
+							</select>
+						</div>
 						<h4>Comments About This Beer</h4>
 						<textarea name="review"><%=beer.review%></textarea><br>
 						<input class="btn btn-outline-success" type="submit" name="Edit This Beer">	
 					</div>
 				</div>
-			</div>
-				
+			</div>	
 		</form>
 	</main>
 </body>
