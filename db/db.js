@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionString = process.env.MONGODB_URI || process.env.DB_HOST;
+const connectionString = 'mongodb://heroku_htt7qxkf:bioljiigkkldsiui3q584i98bi@ds235065.mlab.com:35065/heroku_htt7qxkf';
 
 mongoose.connect(connectionString);
 
