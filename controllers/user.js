@@ -29,8 +29,6 @@ router.route('/register')
 			else{
 				const password = req.body.password;
 				const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
-				console.log(passwordHash);
-				console.log(password);
 				const userDBentry = {};
 				userDBentry.username = req.body.username;
 				userDBentry.password = passwordHash;
@@ -53,7 +51,7 @@ router.route('/login')
 		User.findOne({username: req.body.username}, (err, user)=>{
 			if(err)
 				res.send(err);
-			if(bcrypt.compareSync(req.body.password, user.password)){
+			if(user && bcrypt.compareSync(req.body.password, user.password)){
 				req.session.logged = true;
 				req.session.username = user.username;
 				req.session.id = user._id;
