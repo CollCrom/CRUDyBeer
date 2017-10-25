@@ -198,7 +198,139 @@ a, a:link, a.visited, a:focus{
 	}
 }
 
-#rateYo {
-	margin: 0;
-	text-align: center;
+
+
+
+
+/* main container */
+.container1{
+	top: 10px;
+	width:100%;
+	height:auto%;
+
+	position: sticky;
+	left:0%;
+	z-index: 100;
+
 }
+
+.fallingBeers {
+    text-align: center;
+}
+.fallingBeers span {
+    display: inline-block;
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    width: auto;
+    height: auto;
+    opacity: 0;
+
+	// margin: -280px 40px 54px  -34px;
+	background: url("/images/beerisgood.png");
+	background-size: 80px;
+    z-index: 100;
+    -webkit-animation: fallingBeers 10s infinite  linear;
+    
+}
+.fallingBeers span:nth-child(5n+5) {
+
+    -webkit-animation-delay: 1.3s;
+    
+}
+.fallingBeers span:nth-child(3n+2) {
+
+    -webkit-animation-delay: 1.5s;
+    
+}
+.fallingBeers span:nth-child(2n+5) {
+
+    -webkit-animation-delay: 1.7s;
+    
+}
+
+.fallingBeers span:nth-child(3n+10) {
+
+    -webkit-animation-delay: 2.7s;
+    
+}
+.fallingBeers span:nth-child(7n+2) {
+
+    -webkit-animation-delay: 3.5s;
+    
+}
+.fallingBeers span:nth-child(4n+5) {
+
+    -webkit-animation-delay: 5.5s;
+    
+}
+.fallingBeers span:nth-child(3n+7) {
+
+    -webkit-animation-delay: 8s;
+    
+}
+@-webkit-keyframes fallingBeers {
+  2% {
+    opacity: 0;
+
+	-webkit-transform: translate(0, 0px) rotateZ(10deg);
+  }
+
+  25% {
+    opacity: 1;
+
+	-webkit-transform: translate(50px, 175px) rotateZ(20deg); 
+  }
+  75% {
+    opacity: 1;
+
+	-webkit-transform: translate(200px, 500px) rotateZ(275deg); 
+  }
+  100% {
+    opacity: 0;
+
+	-webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
