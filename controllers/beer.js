@@ -43,7 +43,7 @@ router.route('/new')
 				else{
 					user.beer.push(beer);
 					user.save((err, data)=>{
-						res.render('user/profile', {user: user, userBeer: user.beer, logged: req.session.logged})
+						res.render('user/profile', {user: user, userBeer: user.beer, sound: "", logged: req.session.logged})
 					})	
 				}
 			})
@@ -65,7 +65,7 @@ router.route('/edit/:id')
 					user.beer.id(req.params.id).remove()
 					user.beer.push(beer);
 					user.save((err, data)=>{
-						res.render('user/profile', {user: user, userBeer: user.beer, logged: req.session.logged});
+						res.render('user/profile', {user: user, userBeer: user.beer, sound: "", logged: req.session.logged});
 					})
 				}
 			})
@@ -78,7 +78,7 @@ router.route('/:id')
 			if(err){
 				res.send('im an error getting the ID')
 			}else{
-				res.render('beer/show', {beer: beer, username: req.session.username, logged: req.session.logged})
+				res.render('beer/show', {beer: beer, username: req.session.username, sound: "", logged: req.session.logged})
 			}
 		})
 	})
