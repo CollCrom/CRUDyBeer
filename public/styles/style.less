@@ -123,6 +123,8 @@ a, a:link, a.visited, a:focus{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	// postion: relative;
+	// z-index: 100;
 }
 .show-card {
 	justify-content: center;
@@ -210,7 +212,7 @@ a, a:link, a.visited, a:focus{
 
 	position: sticky;
 	left:0%;
-	z-index: 100;
+	z-index: -100;
 
 }
 
@@ -230,7 +232,7 @@ a, a:link, a.visited, a:focus{
 	// margin: -280px 40px 54px  -34px;
 	background: url("/images/beerisgood.png");
 	background-size: 80px;
-    z-index: 100;
+    z-index: 2;
     -webkit-animation: fallingBeers 10s infinite  linear;
     
 }
