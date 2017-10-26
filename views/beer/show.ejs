@@ -19,9 +19,10 @@
 		</div>
 	</section>
 	<% if(logged && beer.reviewedBy === username){%>
-		<button class="btn btn-outline-success" type="submit">
-			<a href="/beer/edit/<%=beer._id%>">Edit</a>
-		</button>
+	<a href="/beer/edit/<%=beer._id%>">
+		<button class="btn btn-outline-success" type="submit">Edit</button>
+	</a>		
+		
 		<button class="btn btn-outline-success" type="submit">
 			<a href="/beer/delete/<%=beer._id%>">Delete</a>
 		</button>
