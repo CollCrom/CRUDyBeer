@@ -190,7 +190,7 @@ a:focus {
   height: auto%;
   position: sticky;
   left: 0%;
-  z-index: 100;
+  z-index: -100;
 }
 .fallingBeers {
   text-align: center;
@@ -206,7 +206,7 @@ a:focus {
   opacity: 0;
   background: url("/images/beerisgood.png");
   background-size: 80px;
-  z-index: 100;
+  z-index: 2;
   -webkit-animation: fallingBeers 10s infinite  linear;
 }
 .fallingBeers span:nth-child(5n+5) {
