@@ -10,6 +10,9 @@
 		<audio src="<%=sound%>" autoplay></audio>
 	</header>
 	<main>
+		<% if(userBeer.length === 0){%>
+			<h1 class='helper-text'>You have reviewed no beers so far!</h1>
+		<%}%>
 		<div class="card-deck">
 			<%userBeer.forEach((beer) =>{%>
 				<div class="card">
