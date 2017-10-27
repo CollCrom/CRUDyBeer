@@ -1,0 +1,8 @@
+1. Users should be able to log in and log out with encrypted passwords.
+2. If users use the wrong username or password to log in they should get an error message.
+3. Users cannot make an account with the same username as another user and should get an error on trying to do so.
+4. Users should be able to make reviews and edit their previous reviews on the beers.
+5. Users should be able to remove only their reviews from the beer menu.
+6. Users should be able to view reviews left by other users.
+7. Each user has an unique profile which shows all beers that they have reviewed.
+8. When making reviews users are able input the beer name, beer type, beer ABV, brewery, brewery image, a beer rating between 0 and 5, and a review on the beer.
