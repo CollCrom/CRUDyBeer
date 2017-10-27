@@ -10,10 +10,7 @@ const options = {
 };
 const apiCall = () => {
 	request(options, (err, res, body)=>{
-		console.log('================================================')
-		console.log(err, res, body);
-		console.log('================================================')
-		console.log('================================================')
+	
 		const json = JSON.parse(body);
 		const beers = json.data;
 		beers.forEach((beer, i)=>{
