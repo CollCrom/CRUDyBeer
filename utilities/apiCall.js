@@ -10,6 +10,10 @@ const options = {
 };
 const apiCall = () => {
 	request(options, (err, res, body)=>{
+<<<<<<< HEAD
+	
+=======
+>>>>>>> b6ca2440c180cfa9728b2fc0e14d7630fb90b3e0
 		const json = JSON.parse(body);
 		const beers = json.data;
 		beers.forEach((beer, i)=>{
