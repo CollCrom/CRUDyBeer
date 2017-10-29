@@ -15,7 +15,7 @@ const apiCall = () => {
 		beers.forEach((beer, i)=>{
 			const beerObj = {}
 			// name         abv         type                    review              brewery                   brewery image
-			if(beer.name && beer.abv && beer.style.shortName && beer.description && beer.breweries[0] && beer.breweries[0]){
+			if(beer.name && beer.abv && beer.style.shortName && beer.description && beer.breweries && beer.breweries[0].images){
 				beerObj.name = beer.name;
 				beerObj.abv = beer.abv;
 				beerObj.type = beer.style.shortName;
