@@ -21,7 +21,8 @@ const apiCall = () => {
 				beerObj.type = beer.style.shortName;
 				beerObj.review = beer.description;
 				beerObj.brewery = beer.breweries[0].name;
-				beerObj.breweryImg = beer.breweries[0].images.medium;
+				if(beer.breweries[0].images.medium)
+					beerObj.breweryImg = beer.breweries[0].images.medium;
 				Beer.findOne(beerObj, (err, beer)=>{
 					if(!beer){
 						beerObj.rating = Math.floor(Math.random()*6)
